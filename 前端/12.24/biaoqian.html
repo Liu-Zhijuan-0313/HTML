@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<!--
+h1-h6标题标签
+p段落标签，行距大
+br换行标签，行距小
+span行内标签，默认无样式
+div块标签
+hr水平线
+    -->
+<div>
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+    <p>
+        行内标签行内标签行内标签行标签行内标签行内标标签行内标签行内标标签内标签行内标签行内标
+        标签行内标标签行内<span>签行内标签行内</span>标签行内标标签行标签行内标标签行内标
+        签行内标<br>内标签行内标签行内标签行内标签行内标签标签行内标签行内标签标签行内标签行
+        内标签
+        <br>
+    </p>
+    行内标签行内标签行标签行内标签行内标标签行内标签行内标标签内标签
+    <p>段落标签</p>
+    <hr>
+</div>
+<!--
+b 加粗标签
+strong强调标签
+i 斜体标签
+em斜体标签，暂时当前浏览器是斜体
+big,small,大小字体
+u 下划线
+del 删除线
+sub 下标 sup 上标
+所有标签都可以写title，鼠标划入会显示
+abbr和title结合使用，不然下划虚线不会显示，不常用
+-->
+<div>
+    　“<b>为中国人民谋幸福，为中华民族谋复兴</b>，是中国共产党人的初心和使命，也是<strong>改革开放的初心和使命</strong>。”在庆祝改革开放40周年大会上，<i>习近平总书记深情回顾40年来人民生活发生的巨大变化，</i>深刻总结我们党以人民为中心推进改革开放的实践启示，为新时代改革开放指明正确价值取向。
+    　　在改革开放的奋进足音中，<em>亿万中国人民改变了自己的命运，迎来新的希望。</em>全国居民人均可支配收入由171元增加到2.6万元，贫困人口累计减少7.4亿人，建成了包括养老、医疗、低保、住房在内的世界最大的社会保障体系……40年来，百姓生活不断改善，忍饥挨饿、缺吃少穿、生活困顿这些几千年来困扰我国人民的问题总体上一去不复返了。从普遍贫穷到奔向全面小康，从封闭落后到自信开放，改革开放深刻改变中国人民的面貌和中华民族的面貌，为实现民族复兴凝聚起万众一心、众志成城的磅礴力量。
+    　<br><big>　“民有所呼，我有所应”</big>,
+    <small>改革开放是我们党的一次<u>伟大觉醒</u>，这个觉醒是基于对时代潮流的深刻洞察，基于对人民群众期盼和需要的深刻体悟</small>
+    。改革开放的伟大成就，是我们党与人民“想在一起、干在一起”共同创造出来的。实践启示我们，推进新时代改革开放，就要不忘初心，牢记使命，牢牢把握好“为了谁、依靠谁”的根本问题，始终坚持以人民为中心，不断实现人民对美好生活的向往。
+    　　推进新时代改革开放，就要把人民利益作为一<sub>切工</sub>作的根本出<sup>发点</sup>和落脚点，让人民共享改革发展成果。要深刻把握我国社会主要矛盾的历史性转化，
+    <del>把准人民群众的新需求、新期盼，既要“富口袋”也要“富脑袋”</del>
+    ，既要“做大蛋糕”也要“分好蛋糕”，更好满足人民群众在民主、法治、公平、正义、安全、环境等方面日益增长的要求，不断促进人的全面发展、全体人民共同富裕，让人民有更多、更直接、更实在的获得感、幸福感、安全感。
+    <hr>
+</div>
+<!--
+有序列表ol li
+无序列表ul li
+自定义 dl dt dd
+Emmet插件
+    >  生成子标签
+    ^  生成父标签的同级标签
+    *  代表产生多个项目
+    {} 实质内容 ul>li.item${item$}*3
+    $  子增长
+    +  同级标签
+    @N 指定开始的序号，$ 后面增加 @- 来实现倒序排列  ul>li.item$@3*5
+    () 优先级 div>(ol>li*3)+(ul>li*3)+ol>li
+a标签超级链接 需要使用到属性href  目标url
+target  _self 当前页面打开  _blank 新的空白页面打开
+锚点跳转，超级链接可以指定本页面特定位置  id属性，不能重复
+属性 target="_blank" 新页面打开  target="_self"默认本页打开
+table tr th td
+img src
+video src
+audio src
+-->
+<div>
+    <ol>
+        <li>
+            第一标题
+            <ol>
+                <li>第一节</li>
+                <li>第一节</li>
+                <li>第一节</li>
+            </ol>
+        </li>
+        <li>
+            第二标题
+            <ul>
+                <li>第一节</li>
+                <li>第一节</li>
+                <li>第一节</li>
+            </ul>
+        </li>
+        <li>第三标题</li>
+    </ol>
+    <ul>
+        <li>
+            第一标题
+            <ul>
+                <li>第一节</li>
+                <li>第一节</li>
+                <li>第一节</li>
+            </ul>
+        </li>
+        <li>第二标题</li>
+        <li>第三标题</li>
+    </ul>
+    <dl>
+        <dt>第一章</dt>
+        <dd>第一章内容</dd>
+        <dt>第一章
+        <dd>第一章内容</dd>
+        </dt>
+        <dt>第一章</dt>
+        <dd>第一章内容</dd>
+    </dl>
+    <a href="http://www.baidu.com" target="_blank">进入百度链接，新页面打开</a>
+    <a href="http://www.baidu.com">进入百度链接，当前页面打开</a>
+    <table border="3" cellspacing="3" cellpadding="3">
+        <tr>
+            <th>Header</th>
+            <th>Header</th>
+            <th>Header</th>
+            <th>Header</th>
+        </tr>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+    </table>
+    <img src="img/img01.jpg" width="300px" height="200px" alt="">
+    <img src="https://imgsa.baidu.com/news/q%3D100/sign=a91b3565923df8dca03d8b91fd1072bf/a50f4bfbfbedab64da9b7652fa36afc378311eb2.jpg"
+         width="300px" height="200px" alt="">
+    <img width="600px" height="400px" src="img/img02.jpg" usemap="#str">
+    <map name="str">
+        <area shape="poly" coords="0,0,0,50,150,150" href="#" alt=""/>
+        <area shape="circle" coords="200,200,50" href="#" alt=""/>
+        <area shape="rect" coords="200,200,300,300" href="#" alt=""/>
+    </map>
+    <br>
+    <video src="video/1.mp4" width="300px" height="240px" controls></video>
+    <br>
+    <audio src="http://www.ytmp3.cn/down/55517.mp3" controls>
+        当前浏览器不支持audio
+    </audio>
+</div>
+<hr>
+</body>
+</html>
