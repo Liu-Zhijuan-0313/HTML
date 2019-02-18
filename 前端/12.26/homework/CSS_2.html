@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>四种基本选择器</title>
+    <style type="text/css">
+			*{
+				background-color: #FFE4C4;
+			}
+			
+			span {
+				color: #FF0000;
+			}
+			#item1 {
+				color: #8A2BE2;
+				background-color: #00FFFF;
+			}
+			.item2 {
+				color: #A52A2A;
+				background-color: chartreuse;
+			}
+
+    </style>
+</head>
+<body>
+通配符选择器<br>
+<span>标签选择器</span>
+<p id="item1">id选择器</p>
+<div class="item2">
+    类选择器
+</div>
+</body>
+</html>
+<!-- 四种基本选择器 ：
+			*    通配符选择器，针对所有的标签都适用（不建议使用）
+			标签  标签选择器，
+					所有的标签，都可以是选择器，选择的所有，而不是一个，一定能够被选择上
+			id   id选择器  
+					 通常用于交互，针对某一个特定的标签使用，只能使用一次
+					（1）只能有字母、数字、下划线。
+					（2）必须以字母开头。
+					（3）不能和标签同名。比如id不能叫做body、img、a。
+					（4）大小写严格区分，也就是说aa,和AA是两个不同的ID
+			.    class类选择器 通常用于样式，针对所有标签使用
+		
+
+-->
