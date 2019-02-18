@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>事件</title>
+</head>
+<body>
+<!--
+窗口事件：
+    onload 加载完成 onunload 卸载完成
+    onfocus 聚焦    onblur   失去焦点
+    onresize 窗口大小改变了
+表单事件：
+    onfocus 聚焦  onblur 失去焦点 onchange 输入内容变化
+键盘事件：
+    onkeydown按下瞬间       onkeypress正在按着    onkeyup松开了
+鼠标事件：
+    onmouseenter 鼠标划入   onmousemove 在元素上移动
+    onmouseleave 鼠标离开了 onmousedown 鼠标按下
+    onmouseup 鼠标抬起      onmousewheel 鼠标转动滑轮-->
+<!-- 按键事件
+<body  onkeydown="console.log('按下')" onkeypress="console.log('按着')"  onkeyup="console.log('抬起')">	</body>
+ -->
+
+<!-- 窗口事件
+<body onload="console.log('加载完成')" onunload="console.log('卸载完成')"
+onfocus="console.log('聚焦')" onblur="console.log('失去焦点')"
+onresize="console.log('窗口大小改变了')"></body> -->
+
+表单事件
+<form action="#" method="post">
+    <input type="text" onfocus="console.log('聚焦了')" onblur="console.log('失去焦点')"
+           onchange="console.log('输入内容改变了')"/>
+</form>
+鼠标事件
+<p onmouseenter="console.log('鼠标划入')" onmousemove="console.log('鼠标在元素上移动')"
+   onmousewheel="console.log('鼠标转动滑轮')" onmouseleave="console.log('鼠标离开了')"
+   onmousedown="console.log('鼠标按下')" onmouseup="console.log('鼠标抬起')"> 测试</p>
+
+</body>
+</html>
