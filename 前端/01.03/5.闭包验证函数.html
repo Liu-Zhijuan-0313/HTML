@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function fun(){
+				let i = 20;
+				let j = 20;
+				console.log(i,j);
+				function fun1(){
+					let x = 20;
+					i--;
+					j++;
+					console.log(i,j,i+j,x);
+				}
+				return fun1;
+			}
+			
+			fun();
+			fun()();
+			
+			team = fun();
+			team();
+			team();
+			team();
+			team1 = fun();
+			team1();
+		</script>
+	</body>
+</html>
