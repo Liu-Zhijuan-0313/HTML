@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 五种基本数据类型
+			var a;
+			console.log(a, typeof(a));
+			a=1;
+			console.log(a, typeof(a));
+			a=0.1
+			console.log(a,typeof(a));
+			a="a";
+			console.log(a, typeof(a));
+			a=true;
+			console.log(a,typeof(a));
+			a=null;
+			console.log(a, typeof(a));
+			// 两种复合数据类型
+			var b=[1,2,3,4];
+			console.log(b);
+			console.log(b[0]);
+			var c=new Array(1,"dsa",3,4);
+			console.log(c)
+			var d={"a":"1","b":"2","c":"hello"};
+			console.log(d["a"],d.b);
+			
+			// var定义全局变量，放前面和后面都可以
+			console.log(e);
+			var e;
+			
+			// let定义局部变量，只能放前面
+			let f;
+			console.log(f);
+			
+			// const声明变量应该立即赋值,定义变量之后不能重新赋值
+			const g=313;
+			console.log(g);
+			
+			const gg=[];
+			gg[0]=1;
+			gg[1]=2;
+			gg[2]=3;
+			console.log(gg);
+			
+			// 类型转换,转换为字符串
+			var aa=10;
+			var bb=aa.toString(2);
+			console.log(bb)
+			
+			// i++先赋值后运算,++i先运算后赋值
+			// i--先赋值后运算,--i先运算后赋值
+			var i=-1;
+			console.log(i++);
+			console.log(i);
+			
+			var i=-1;
+			console.log(++i);
+			console.log(i);
+			// 逻辑运算符  && || !
+			var i=1;
+			if(i++&&++i){
+				console.log(i)
+			}
+			var i=1;
+			if(i++&&i++){
+				console.log(i)
+			}
+			
+			var i=1;
+			if(i++||++i){
+				console.log(i)
+			}
+			var i=1;
+			if(++i||i++){
+				console.log(i)
+			}
+			if(!false){
+				console.log("hello world")
+			}
+			
+			// if和switch条件语句
+			let ee=930;
+			if (e<50){
+				coensole.log("ee<50");
+			}
+			else if (ee<100){
+				console.log("ee<100");
+			}
+			else{
+				console.log("ee>=100")
+			}
+			
+			let ff=12;
+			switch(ff){
+				case ff=1:
+					console.log("ff=1");
+					break;
+				case ff=2:
+					console.log("ff=2");
+					break;
+				default:
+					console.log("不是1也不是2")
+					break;
+			}
+		</script>
+	</body>
+</html>
+<!-- 
+	var定义全局变量，放前面和后面都可以
+	let与const都是只在声明所在的块级作用域内有效。
+	let声明的变量可以改变，值和类型都可以改变，没有限制。
+	const声明的变量不得改变值，这意味着，const一旦声明变量，就必须立即初始化，
+	不能留到以后赋值。
+
+
+	对于复合类型的变量，如数组和对象，变量名不指向数据，而是指向数据所在的地址。
+	const命令只是保证变量名指向的地址不变，并不保证该地址的数据不变，
+	所以将一个对象声明为常量必须非常小心。 
+ -->
