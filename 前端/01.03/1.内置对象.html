@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>内置对象</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// Math
+			console.log(Math.PI);
+			console.log(Math.ceil(3.13));
+			console.log(Math.floor(3.13));
+			console.log(Math.round(3.49));
+			console.log(Math.round(3.5));
+			console.log(Math.max(2,43,21));
+			console.log(Math.min(2,43,21));
+			console.log(Math.abs(-3));
+			console.log(Math.pow(2,4));
+			console.log(Math.random());
+			console.log(parseInt(Math.random()*5+1));
+			console.log(parseInt(Math.random()*20+50))
+			console.log(Math.sqrt(4));
+			
+			// string
+			let str = "hello world"
+			console.log(str.length);
+			console.log(str.indexOf("o"));
+			console.log(str.lastIndexOf("o"));
+			console.log(str.charAt(1));
+			console.log(str.substr(2,7));
+			console.log(str.substring(2,7));
+			console.log(str.replace("hello", "your"))
+			console.log(str.split("o"));
+			console.log(str.toLowerCase());
+			console.log(str.toUpperCase());
+			console.log(str)
+			
+			// Date
+			let mydate = new Date;
+			console.log(mydate.getFullYear());
+			console.log(mydate.getMonth());
+			console.log(mydate.getDate());
+			console.log(mydate.getDay());
+			console.log(mydate.getHours());
+			console.log(mydate.getMinutes());
+			console.log(mydate.getSeconds());
+			console.log(mydate.getTime());
+			
+			// Array
+			let array = [1,2,3,4,5,6];
+			console.log(array.indexOf(1));
+			console.log(array.length);
+			array.push(7);
+			console.log(array);
+			a = array.pop();
+			console.log(a);
+			console.log(array);
+			array.unshift(0)
+			console.log(array);
+			array.shift();
+			console.log(array);
+			array.splice(0,3,22,13,45,24);
+			console.log(array);
+			console.log(array.reverse());
+			
+			console.log(array.sort(function(a,b){
+				return a-b;
+			}))
+			console.log(array.sort(function(a,b){
+				return b-a;
+			}))
+		</script>
+	</body>
+</html>
