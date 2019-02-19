@@ -1,0 +1,297 @@
+html:(Hyper Text Markup Language）超文本标记语言
+
+基本标签：
+div p span hr br h1-h6
+文本标签：
+u del sup sub big small b/strong i/em
+列表标签：
+ul ol li
+dl dt dd
+表格：
+table tr td th  (cellspacing cellpadding border colspan rowspan)
+img video audio  (autoplay属性为自动播放)
+超级链接：
+<a href="#" target="_blank"></a>
+
+form input select textarea iframe框架标签
+
+
+
+
+表单form :表单标签、表单域、表单按钮
+action:服务器地址
+method：get/post  规定在提交表单时所用的 HTTP 方法
+表单域: text password hidden radio checkbox(checked) file 
+select(option selected) textarea   submit reset
+
+
+属性：是以键值对的形式出现，用空格隔开
+class id style title
+快捷键accesskey="" (input中设置) 可编辑contenteditable="true" 
+文字方向dir="ltr" dir="rtl" 隐藏hidden="hidden" 选中checked selected
+
+
+
+事件：
+窗口事件：onload onunload onresize onfocus onblur
+表单事件：onfocus onblur onchange
+键盘事件：onkeydown onkeypress onkeyup
+鼠标事件：onmousedown onmouseup onmouseenter onmouseleave 
+		onmousemove onmousewheel 
+		
+		
+		
+		
+		
+		
+		
+css:指层叠样式表 (Cascading Style Sheets)
+基本语法：选择器{属性：属性值}
+三种样式优先级：内联>内部>外联
+内联：body中style
+内部:head中style
+外联:head中link src="路径"引入
+
+
+选择器：
+基本选择器：id class * 标签
+符号选择器：, > 空格 + ~
+属性选择器：
+		[属性名] [属性名="属性值"] 
+		[属性名^="属性值开头"] [属性名$="属性值结尾" ]
+		[属性名*="带属性值符号"] [属性名~="其中一个属性值"]
+伪类选择器：
+		:link初始颜色 :visited访问过颜色 
+		:hover把鼠标移动到元素上面 :active点击元素那一下的效果
+		:enabled :disabled :checked 针对于HTML中的Form元素操作
+
+	考虑所有	
+			:first-child :last-child 
+		    :nth-child(n) :nth-last-child(n) :only-child
+	
+	考虑当前：	
+		:first-of-type :last-of-type 
+		:nth-of-type(n) :nth-last-of-type(n) :only-of-type
+		
+	:empty 没有子标签，没有内容	
+	input:not([type="submit"]) {border: 1px solid red;}
+
+
+字体样式：
+font-family font-size font-weight 
+font-style  字体倾斜效果 normal不倾斜、oblique和italic倾斜
+			Italic是使用文字的斜体，Oblique是让没有斜体属性的文字倾斜！
+			
+文本样式：
+text-transform(capitalize uppercase lowercase)
+text-decoration(underline下 line-through中 overline上)
+text-indent(缩进2em汉字)
+text-align(left right center)
+word-spacing单词距离 letter-spacing字符距离
+
+
+背景:
+background-color
+background-image：url();
+background-repeat(repeat no-repeat repeat-x repeat-y)
+background-position(right top 或者 x y坐标)
+
+
+列表样式：
+list-style-type(disc circle square)
+list-style-image
+***list-style-position(outsiide/inside)
+
+
+
+盒子模型：margin border padding content
+width和height只定义内容大小
+
+border:
+	border-width 
+	border-color 
+	border-style
+	border:可以写一起
+四边可独立设置：
+	border-left-width 
+	border-left-color 
+	border-left-style
+	border-left：可以写一起
+padding:
+边框和内容之间的空白宽度
+	综合设置padding:2px;
+	单边设置padding-left:2px;
+margin:
+	标签和它相邻的标签之间的空白宽度
+	**外边距的设置是上下相叠
+	综合设置margin:2px;
+	单边设置margin-left:2px;
+	
+
+Display属性：
+	CSS使用display设置的标签的显示
+	none 隐藏
+	block 块元素
+	inline 行内元素
+	inline-block 行内块元素
+
+float:浮动(left right)
+**clear:清除浮动，另起一行(left right both)
+
+
+position:
+	static 默认值使用基于“文档流”的定位
+	relative相对定位 即在“文档流”的基础上，结合left和top属性，相对定位
+	absolute绝对定位 脱离“文档流”，并基于它的“包含框”，使用left和top属性来定位
+	fixed固定定位    特殊的绝对定位，即它的“包含框”为浏览器
+	sticky粘性定位   当没有滚动到特殊位置时，跟随滚动条滚动，到达特定位置时位置不再发生变化
+	
+
+
+javaScript
+因特网上最流行的脚本语言，轻量级的编程语言，可插入html页面
+1.body 2.head 3.外部用script src="路径"引入
+注释： //单行  /* */多行
+输出：
+	alter("内容");//警告框，会阻断javascript执行
+	document.write("内容");//向文档写入html或js代码
+	console.log();//控制台输出，调式
+变量：
+	var全局：如果不初始化会输出undefined，不会报错
+	let局部：函数内部使用let定义后，对函数外部无影响。
+	const常量，不可修改
+类型检测：typeof(obj)
+数据类型：
+	基本：
+		1.字符串string 
+		2.数字number 
+		3.布尔boolean 
+		4.null空值，用来清空 
+		5.undefined不含有值
+	复合：数组[]，对象{}
+类型转换：toString() toSting(radis) 
+
+运算符：
+	算数：+ - * / %  i++  ++i   i--  --i
+	赋值：=  +=  -=  *=  /=  %=
+	比较：> >= <   <=  != == ===
+	逻辑：&& || ！
+	运算符的优先级:！ > 算术运算符 > 关系运算符 > && > || > 赋值运算符
+	
+	
+流程控制语句：
+	顺序结构：
+	分支结构：if(){}  if(){}else{} if(){}elif(){}else{}
+			switch(n){case 1:....break;case 2 :...break;default:....break;}
+	循环结构：for(){}  while(){} do{}while()  for...in(遍历对象)
+
+break:结束循环
+continue:结束当前循环，进入下一次循环
+
+函数：
+	系统函数(内置函数) isNaN parseInt() parseFloat() isFinite()用来确定参数是否是一个有限数值
+	自定义函数：function 函数名(){}
+内置对象：
+1.数学：Math.PI Math.ceil()/floor/round/max/min/abs/pow/random
+2.Sting：length/indexOf()/lastIndexOf()/charAt()/replace(str,newstr)/substr(start,length)/subting(start,stop)/toLowerCase()/toUpperCase()/split()
+3.Date: var mydate = new Date()
+		mydate.getFullYear()/
+		getMonth()/getDate()/getDay()/getHours()/getMinutes()/getSeconds()/getMillseconds()/getTime()
+4.数组： length pop()/push()/shift()/unshift()/indexOf()/reverse()/sort()/splice()
+
+
+对象：var obj = new object()
+	 obj.name = 'aa'
+	 obj.study = function(){console.log("方法作为对象的键所存储的值")} 
+JSON:是一种轻量级的数据交换格式，我们称之为JavaScript对象表示法
+JSON.parse(str)将字符串转换为json对象
+JSON.stringify(obj)将json转换为字符串
+
+延迟函数：setTimeout(fn,time) clearTimeout(t)
+计时函数：setInterval(fn,time) clearInterval(t)
+
+匿名函数：匿名函数就是没有名字的函数
+1,匿名函数赋值给变量  执行函数
+2,将匿名函数赋值给对象的f键 执行函数
+3, 将匿名函数作为参数传递给fun函数 执行fun函数
+	  let a = function(){
+		   console.log("匿名函数赋值给变量,执行函数");
+	   }
+	   a();
+	   
+	   let obj = {};
+	   obj.f = function(){
+		   console.log("匿名函数赋值给对象的键");
+	   }
+	   obj.f();
+	   
+	   function fun(b){
+		   b();
+	   }
+	   fun(function(){console.log("匿名函数作为参数传递")})
+闭包：是指有权访问另一个函数作用域中的变量的函数
+1，函数内部嵌套函数
+2，外部函数将内部函数返回
+3，内部函数可以访问外部函数局部变量，并且保存变量
+	function fun(){
+	   console.log("外部函数执行");
+	   function fun1(){
+		   console.log("内部函数执行");
+	   }
+	   // fun1();
+	   return fun1;
+   }
+   <!-- team = fun();
+   team(); -->
+   fun()();
+   
+  
+BOM浏览器对象模型
+Window属性：
+	history:back,forward,go(count)
+	scree:width,height,availWidth,availHeight
+	navigator:用来描述浏览器相关信息的
+	Location:host、hostname、href、pathname、port、protocol
+Window事件
+onload 一个页面或一幅图像完成加载 在对象已加载时触发
+onresize 随着窗口或框架大小的改变而改变 window.onresize=function(){}
+onscroll 滚动条滚动事件
+
+DOM文档对象模型
+获取文档对象：
+	document.getElementById() 
+	document.getElementsByTagName()  标签
+	document.getElementsByName() 属性
+	document.getElementsByClassName()
+	
+操作DOM对象内容：innerText  innerHTML
+
+操作DOM对象的属性：
+	DOM对象.属性名称
+	DOM对象[属性名称]
+	getAttribute(属性名称)，setAttribute[属性名称，属性值]
+	removeAttrite(属性名称)
+
+操作DOM对象样式
+标签对象.style.样式名称
+获取内部和外联样式getComputedStyle(对象).width
+操作DOM节点：
+	createEelement()
+	appendChild()
+	insertBefore()
+	remove()
+	removeChild()
+	
+	parentElement/ children/
+	firstElementChild/ lastElementChild/
+	previousElementSibling/ nextElementSibling
+操作DOM对象事件
+	鼠标：onclick,ondblick
+	键盘:onmousedown,onmouseup,onmouseenter,onmouseleave,
+	窗口:onload,onscroll,onresize
+	
+	
+
+
+
+
