@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript">
+			
+		</script>
+		<style type="text/css">
+			ul{
+				display: none;
+			}
+			.ul{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>HTML</p>
+			<ul>
+				<li>HTML1</li>
+				<li>HTML2</li>
+				<li>HTML3</li>
+			</ul>
+			<p>CSS</p>
+			<ul>
+				<li>CSS1</li>
+				<li>CSS2</li>
+				<li>CSS3</li>
+			</ul>
+			<p>javaScript</p>
+			<ul>
+				<li>javaScript1</li>
+				<li>javaScript2</li>
+				<li>javaScript3</li>
+			</ul>
+			<script type="text/javascript">
+				let ps = document.getElementsByTagName("p");
+				for(let i=0;i<ps.length;i++){
+					ps[i].onclick = function(){
+						for(let j=0;j<ps.length;j++){
+							
+							// ps[j].nextElementSibling.style.display = "none";
+							// $(ps[j]).next().css("display","none");
+							
+							if(this==ps[j]){
+								$(this).next().toggleClass("ul")
+							}else{
+								if($(ps[j]).next().hasClass("ul")){
+									$(ps[j]).next().removeClass("ul")
+								}
+							}
+							
+						}
+						// ps[i].nextElementSibling.style.display = "block";
+						// $(this).next().css("display","block");
+						
+
+					}
+	
+				}
+			</script>
+		</div>
+	</body>
+</html>
