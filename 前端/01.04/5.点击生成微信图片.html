@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background-color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onclick = function(e){
+				console.log(e.clientX);
+				console.log(e.clientY);
+				// 创建img标签
+				let weixin = document.createElement("img");
+				// 给img标签添加src属性
+				weixin.setAttribute("src","img/weixin.png");
+				// 显示
+				document.body.appendChild(weixin);
+				// 随机图片大小
+				let ranwh = Math.random()*50+20;
+				weixin.height = ranwh;
+				weixin.width = ranwh;
+				// 定位
+				weixin.style.position = "absolute";
+				weixin.style.top = (e.clientY-weixin.height/2) + "px";
+				weixin.style.left = (e.clientX-weixin.width/2) + "px";
+				
+			}
+		</script>
+	</body>
+</html>
