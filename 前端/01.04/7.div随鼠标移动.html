@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				background-color: red;
+				width: 100px;
+				height: 100px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+			let div = document.getElementsByTagName("div")[0];
+			div.onmousedown = function(){
+				
+				document.onmousemove = function(e1){
+					div.style.left = (e1.clientX-50) + "px";
+					div.style.top = (e1.clientY-50) + "px";
+				}
+					div.onmouseup = function(){
+					console.log("****")
+					document.onmousemove = null;
+				}
+			}
+			
+		
+		</script>
+	</body>
+</html>
