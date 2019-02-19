@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>开始计数:<span>0</span></p>
+		<p>停止计数</p>
+	
+		<a href="http://baidu.com">百度</a>
+		
+		<script type="text/javascript">
+			let a = document.getElementsByTagName("a")[0];
+			a.onclick = function(e){
+				// 阻止超级链接a的跳转,阻止默认事件的执行
+				// href="javascript:void(0)
+				e.preventDefault();
+			}
+			let  p1 = document.getElementsByTagName("p")[0];
+			let  p2 = document.getElementsByTagName("p")[1];
+			let span1 = document.getElementsByTagName("span")[0];
+			let count = 0;
+			
+			p1.onclick = function(e){
+				// 阻止外层标签的运行
+				e.stopPropagation();
+				window.onclick=function(){
+					count++;
+					span1.innerText =count;
+				}
+				p2.onclick = function(){
+					// 设置为null,取消事件的运行
+					window.onclick=null
+					}
+			}
+		
+		</script>
+	</body>
+</html>

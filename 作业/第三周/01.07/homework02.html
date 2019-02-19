@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>	
+<head>		
+<meta charset="UTF-8">		
+<title></title>		
+<script type="text/javascript" src="js/lib/jquery-2.1.4.js" ></script>		
+<script type="text/javascript">			
+//一开始将所有菜单子模块隐藏			
+var hide=true;				
+//通过title的变化定位到不同的元素				
+function showOrHide(title){					
+	var d = document.getElementById("d"+title);					
+	//如果其属性是隐藏的，将其变为显示					
+	if(hide){						
+		d.style.display = "block";						
+		//hide变为false						
+		hide = false;						
+		//反之，将其属性变为隐藏					
+		}else{						
+			d.style.display = "none";						
+			//hide变为true						
+			hide = true;					
+		}				
+	}		
+</script>		
+		<style>			
+			.container{				
+				width: 100px;				
+				text-align: center;			
+			}	
+			.item1{							  
+				cursor:pointer;		
+			}			
+			.item2{				
+				display: none;						
+			}		
+			</style>	
+</head>	
+	<body>	
+	<div class="container">			
+		<div class="content">				
+			<div class="item1" title="1" onclick="showOrHide(this.title);">一级菜单1</div>	
+				<div class="item2" id="d1">					
+				<div>二级菜单1<hr/></div>					
+				<div>二级菜单2<hr/></div>					
+				<div>二级菜单3<hr/></div>				
+			</div>			
+		</div>			
+		<div class="content">				
+			<div class="item1" title="2" onclick="showOrHide(this.title);">一级菜单1</div>		
+				<div class="item2" id="d2">					
+				<div>二级菜单1<hr/></div>					
+				<div>二级菜单2<hr/></div>					
+				<div>二级菜单3<hr/></div>				
+			</div>			
+		</div>			
+		<div class="content">				
+			<div class="item1" title="3" onclick="showOrHide(this.title);">一级菜单1</div>			
+				<div class="item2" id="d3">					
+				<div>二级菜单1<hr/></div>					
+				<div>二级菜单2<hr/></div>					
+				<div>二级菜单3</div>				
+			</div>			
+		</div>		
+	</div>	
+</body>
+</html>
+
+ 

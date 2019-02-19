@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			list-style: none;
+		}
+		.hh{
+			padding-left:30px; 
+		}
+		span{
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+		function scale(x) {
+			var hh = document.getElementsByClassName('hh');
+			if( hh[x].style.display == 'block'){
+				hh[x].style.display = 'none'
+			}else{
+				hh[x].style.display = 'block'
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>
+			<span onclick="scale(0)">一级菜单1</span>
+			<ul class ="hh" style="display:none">
+				<li>二级菜单1</li>
+				<li>二级菜单2</li>
+				<li>二级菜单3</li>
+				<li>二级菜单4</li>
+			</ul>
+		</li>
+		<li>
+			<span onclick="scale(1)">一级菜单1</span>
+			<ul class ="hh" style="display:none">
+				<li>二级菜单1</li>
+				<li>二级菜单2</li>
+				<li>二级菜单3</li>
+				<li>二级菜单4</li>
+			</ul>
+		</li>
+		<li>
+			<span onclick="scale(2)">一级菜单1</span>
+			<ul class ="hh" style="display:none">
+				<li>二级菜单1</li>
+				<li>二级菜单2</li>
+				<li>二级菜单3</li>
+				<li>二级菜单4</li>
+			</ul>
+		</li>
+		<li>
+			<span onclick="scale(3)">一级菜单1</span>
+			<ul class ="hh" style="display:none">
+				<li>二级菜单1</li>
+				<li>二级菜单2</li>
+				<li>二级菜单3</li>
+				<li>二级菜单4</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

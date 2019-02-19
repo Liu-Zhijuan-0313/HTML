@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let team = function(){
+				console.log("匿名函数赋值给变量")
+			}
+			team();
+			
+			
+			let obj = {};
+			obj.f = function(){
+				console.log("将匿名函数赋值给对象的f键");
+			}
+			obj.f();
+			
+			
+			function fun(i){
+				i();
+			}
+			fun(function(){console.log("将匿名函数作为参数传递给fun函数")})
+		</script>
+	</body>
+</html>

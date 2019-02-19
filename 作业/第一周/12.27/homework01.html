@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				margin:20px;
+				border: 20px red solid;
+				padding: 20px;
+			}
+			.aa>p {
+				margin: 20px;
+				border: 2px #000000 solid;
+				padding: 20px;
+			}
+			.a3 {
+				margin: 20px;
+				border: 20px #00FFFF solid;
+				
+				
+			}
+			.a4 {
+				margin: 20px;
+				border: 20px #7FFFD4 solid;
+				padding: 20px;
+			}
+			.a5 {
+				margin: 20px;
+				border: 20px #99D9EA dotted;
+			}
+			.a6 {
+				margin: 50px;
+				border: 20px #FFE4C4 solid;
+				padding: 20px;
+			}
+			span:first-child {
+				font-family: "黑体";
+			}
+			span:nth-child(2) {
+				font-size: 32px;
+			}
+			span:nth-child(3) {
+				font-style: italic;
+			}
+			span:nth-child(4) {
+				font-weight: 900;
+			}
+			.a1>ul>li:first-child {
+				text-decoration: overline;
+				
+			}
+			.a1>ul>li:last-child {
+				text-decoration: underline;
+			}
+			.a1>ul>li:nth-child(2) {
+				text-decoration: line-through;
+			}
+			.a2>ul>li:first-child {
+				text-transform: capitalize;
+			}
+			.a2>ul>li:last-child {
+				text-transform: lowercase;
+			}
+			.a2>ul>li:nth-child(2) {
+				text-transform: uppercase;
+			}
+			p:nth-of-type(1) {
+				text-align: center;
+			}
+			p:nth-of-type(2) {
+				text-align: left;
+			}
+			p:nth-of-type(3) {
+				text-align: right;
+			}
+			.a3>ul>li {
+				list-style: none;
+			}
+			.a4>ul>li {
+				list-style-type: disc;
+			}
+			.a5>ul>li {
+				list-style-type: circle;
+			}
+			.a6>ul>li {
+					list-style-type: square;
+					
+			}
+			.a7 {
+				list-style-image: url(img/bdbj.png);
+				
+			}
+			.a8>ul>li {
+				background-color: #00FFFF;
+				height: 60px;
+				line-height: 60px;
+			}
+			.aa>p {
+				/* border-bottom: solid red 2px;
+				border-top: 1px blueviolet dotted; */
+				border: 3px dotted #8A2BE2;
+				background-color: #00FFFF;
+				background-image: url(img/iconnav01.png);
+			}
+			.aa1>p{
+				border: 3px dotted #8A2BE2;
+				background-color: #00FFFF;
+				background-image: url(img/bdbj.png);
+				background-position: right center;
+				background-repeat: no-repeat;
+				height: 50px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<span>1.字体类型</span>
+		<span>2.字体大小</span>
+		<span>3.字体样式倾斜</span>
+		<span>4.字体粗细</span><br>
+		
+		<div class="a1">
+			<ul>
+				<li>5.线位置上划线 </li>
+				<li>6.线位置中划线 </li>
+				<li>7.线位置下划线</li>
+			</ul>
+		</div>
+		
+		<div class="a2">
+			<ul>
+				<li>hello world</li>
+				<li>hello world</li>
+				<li>hello world</li>
+			</ul>
+		</div>
+		<div class="aa">
+			<p>文本位置居中</p>
+			<p>文本位置左</p>
+			<p>文本位置右</p>
+		</div>
+		
+		<div class="a3">
+			<ul>
+				<li>去除列表样式list-style:none</li>
+				<li>去除列表样式list-style:none</li>
+			</ul>
+		</div>
+		<div class="a4">
+			<ul>
+				<li>列表样式类型list-style-type:disc黑色圆</li>
+				<li>列表样式类型list-style-type:disc黑色圆</li>
+			</ul>
+		</div>
+		<div class="a5">
+			<ul>
+				<li>列表样式类型list-style-type:circle圆圈</li>
+				<li>列表样式类型list-style-type:circle圆圈</li>
+			</ul>
+		</div>
+		<div class="a6">
+			<ul>
+				<li>列表样式类型list-style-type:square矩形黑色</li>
+				<li>列表样式类型list-style-type:square矩形黑色</li>
+			</ul>
+		</div>
+		<div class="a8">
+			<ul>
+				<li>行高：line-height和height设置相同文本上下剧中</li>
+				<li>行高：line-height和height设置相同文本上下剧中</li>
+			</ul>
+		</div>
+		<div class="a7">
+			<ul>
+				<li>列表样式图片list-style-image:url(路径)</li>
+				
+			</ul>
+		</div>
+		<div class="aa">
+			<p>重复背景</p>
+		</div>
+		<div class="aa1">
+			<p>不重复</p>
+		</div>
+	</body>
+</html>
+<!-- 字体：
+		1.font-family  字体类型
+		2.font-size    字体大小
+		3.font-style   字体样式 
+			bnormal不倾斜、oblique和italic倾斜 
+			Italic是使用文字的斜体，Oblique是让没有斜体属性的文字倾斜！
+		4.font-weight  字体粗细
+	 文本：
+		1.text-align        文本位置   文本居中显示：center 左：left 右：right
+		2.text-decoration   线位置 overline 上划线 line-through 删除线 underline下划线
+		3.text-transform    capitalize首字母大写 uppercase 转大写 lowercase转小写
+		4.text-indent：2em; 段落缩进：当前网页2个词的距离
+		5.word-spacing      词语之间的距离 比如hello和world
+		6.letter-spacing    每个单词之间的距离
+	列表样式：
+		去除列表样式list-style:none
+		列表样式类型list-style-type:disc圆黑色/circle圆圈/square矩形黑色
+		列表样式图片list-style-image:url(路径)
+		列表样式位置list-style-position：outline 图标和ul在一起/inside 图标和li在一起，li的距离不变
+		行高：line-height和height设置相同文本上下剧中
+		文本左右剧中text-align:center;
+	背景
+		background-color定义标签的背景颜色
+		background-image:url(路径) 定义背景图片,可定义多背
+		background-position:left top定义背景图片的位置
+			直接使用两个定位单词，例:background-position: right top; 
+			使用x、y坐标，例:background-position: 20px 30px;
+		background-repeat定义背景图片的显示方式 repeat重复 repeat-x横向重复 repeat-y纵向 no-repeat 不重复
+ -->

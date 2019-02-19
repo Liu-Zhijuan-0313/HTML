@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7+12种伪类选择器</title>
+		<style type="text/css">
+			a:link {
+				color: #0000FF;
+			}
+			a:visited {
+				color: #7FFF00;
+			}
+			a:hover {
+				color: #FF0000;
+			}
+			a:active {
+				color: aqua;
+			}
+			input[type="text"]:disabled {
+				background-color: #7FFF00;
+			}
+			input[name="pwd"]:disabled {
+				background-color: aqua;
+			}
+			input[type="radio"]:checked {
+					width: 50px;
+					height: 50px;
+			}
+			
+			div ul>li:first-child {
+				color: #00FFFF;
+			}
+			div ul>li:last-child {
+				color: #0000FF;
+			}
+			div ul>li:nth-last-child(3) {
+				color: #A52A2A;
+			}
+			div ul>li:nth-child(3) {
+				color: #FF0000;
+			}
+			div ul>li>span:only-child {
+				color: aquamarine;
+			}
+			ol>li:first-of-type{
+				background-color: #0000FF;
+			}
+			ol>li:last-of-type {
+				background-color: #00FFFF;
+			}
+			ol>li:nth-last-of-type(2) {
+				background-color: #7FFF00;
+			}
+			ol>li:nth-of-type(3) {
+				background-color: #8A2BE2;
+			}
+			ol>li>span:only-of-type {
+				background-color: #B97A57;
+			}
+			input:not([type="submit"]) {
+				border: 2px solid orangered ;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">link visited hover active伪类选择器</a>
+		<form action="#" method="post">
+			<input type=""date /><br>
+			<input type="text" name="username" disabled="" /><br>
+			<input type="password" name="pwd" disabled="" /><br>
+			男<input type="radio" name="sex" value="nan" />
+			女<input type="radio" name="sex" alue="nv" checked="checked" />
+		</form>
+		<div>
+			<ul>
+				<li>01</li>
+				<li>02</li>
+				<li>03</li>
+				<li>04</li>
+				<li>05</li>
+				<li>06<span>span</span></li>
+				<li>07</li>
+				<li>08</li>
+				<li>09</li>
+				<li>10</li>
+			</ul>
+		</div>
+		<div>
+			<ol>
+				<li>0001</li>
+				<li>0002</li>
+				<li>0003</li>
+				<li>0004</li>
+				<li>0005<span>span</span></li>
+				<li>0006</li>
+				<li>0007</li>
+				<li>0008</li>
+				<li>0009</li>
+				<li>0010</li>
+			</ol>
+		</div>
+		<form action="#" method="post">
+			<input type="text" name="username" /><br>
+			<input type="submit" value="注册"/>
+		</form>
+	</body>
+</html>
+<!-- 7+12种伪类选择器
+			link 普通
+			visited 鼠标点过了
+			hover  鼠标划入
+			active 鼠标点击
+			
+			enable   启用
+			disabled 禁用
+			checked  默认选中
+			1、:first-child 作为父标签的第一个子标签
+			2、:last-child 作为父标签的最后一个子标签
+			3、:nth-child(n) 作为父标签的第N个子标签 数字、even偶数、odd奇数
+			4、:nth-last-child(n) 作为父标签的倒数第N个子标签 数字、even偶数、odd奇数
+			5、:only-child 作为父标签的唯一一个子标签
+			6、:nth-of-type() 只参考当前种类
+			7、:nth-last-of-type() 只参考当前种类
+			8、:first-of-type和:last-of-type 只参考当前种类
+			9、:only-of-type 只参考当前种类
+			10、empty 没有子标签
+			否定选择器
+			input:not([type="submit"]) {border: 1px solid red;}
+	
+			
+ -->

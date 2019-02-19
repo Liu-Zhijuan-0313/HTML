@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<p>开始计数</p>
+		<p>结束计数</p>
+		<p>当前点击计数为<span>0</span></p>
+		<div>点击</div>
+		<script type="text/javascript">
+			let i=0;
+			$("p").first().click(function(e){
+				// 去除外层标签的点击
+				e.stopPropagation();
+				$(window).off("click")
+			
+				$(window).on("click",function(){
+					i++;
+					$("span").text(i);
+				})
+				
+				$("p").eq(1).click(function(){
+					$(window).off("click")
+					console.log("+++++")
+				})
+			})
+			// 可以点击
+			$("div").on("click",function(){
+				console.log("点击了")
+			})
+			// 关闭点击
+			$("div").off("click")
+			// one只能点击一次
+			$("div").one("click",function(){
+				console.log("点击了点击了")
+			})
+			$("div").click(function(){
+				console.log("点击了点击了点击了")
+			})
+// 			$(window).mouseenter(function(){
+// 				console.log("鼠标划入了")
+// 			})
+// 			$(window).mouseleave(function(){
+// 				console.log("鼠标离开了")
+// 			})
+		</script>
+	</body>
+</html>

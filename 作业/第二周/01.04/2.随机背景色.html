@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				background-color: red;
+				width: 100px;
+				height: 100px;
+				margin: 100px auto;
+				position: absolute;
+				left: 50%;
+				top:50%;
+				margin-left: -50px;
+				margin-top:-50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+			let div = document.getElementsByTagName("div")[0];
+			div.onclick = function(){
+				let ran1 = parseInt(Math.random()*255) ;
+				let ran2 = parseInt(Math.random()*255) ;
+				let ran3 = parseInt(Math.random()*255);
+				console.log(ran1,ran2,ran3)
+				// 在rgb里传入参数
+				div.style.backgroundColor="rgb("+ran1+","+ran2+","+ran3+")";
+				console.log(window.innerHeight)
+				;
+			}
+
+		</script>
+	</body>
+</html>

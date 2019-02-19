@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>六种属性选择器</title>
+	</head>
+	<style type="text/css">
+		span[id] {
+			color: #0000FF;
+		}
+		p[id="a2"] {
+			color: #7FFF00;
+		}
+		p[id^="bs"] {
+			color: #8A2BE2;
+		}
+		p[id$="4"] {
+			color: #DEB887;
+		}
+		p[id*="aa"] {
+			color: #FF0000;
+		}
+		p[class~="item1"] {
+			color: darkgoldenrod;
+		}
+	</style>
+	<body>
+		<span id="a1">拥有属性</span>
+		<p id="a2">拥有属性，并且有等于</p>
+		<p id="bskj3">拥有属性，并且属性值以bs开头</p>
+		<p id="a4">拥有属性，并且属性值以4结尾</p>
+		<p id="aadkf">拥有属性，并且属性值包含字符串aa</p>
+		<p id="adkaaf">拥有属性，并且属性值包含字符串aa</p>
+		<p class="item item1 item2">拥有属性，并且属性值有一个为item1</p>
+		<p class=" item1 item5">拥有属性，并且属性值有一个item1</p>
+	</body>
+</html>
+<!-- <!-- 六种属性选择器
+			1.拥有属性
+			2.拥有属性，并且有等于   =
+			3.拥有属性，并且属性值以bs开头  ^=
+			4.拥有属性，并且属性值以4结尾   $=
+			5.拥有属性，并且属性值包含字符串aa  *=
+			6.拥有属性，并且属性值有一个为item1  ~=
+ -->
