@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript">
+			
+		</script>
+		<style type="text/css">
+			
+			.div2>form{
+				display: none;
+			
+			}
+			.div2>p {
+				 position:absolute;
+				 top: -10px;
+				 left: 60px;
+			}
+			/* .div1>p{
+				position:absolute;
+				top: 0px;
+				left: 0px;
+			} */
+		</style>
+	</head>
+	<body>
+		
+		<div class="div1">
+			注册
+			<form action="#" method="post">
+				邮箱：<input type="email" placeholder="请输入邮箱" required /><br>
+				密码：<input type="password" placeholder="请输入密码" required /><label for=""></label><br>
+				手机号<input type="text" placeholder="请输入手机号"/><br>
+				<br>
+				<input type="submit" value="注册" style="width: 100px;background: cadetblue;margin-left: 50px;"/>
+			</form>
+		</div>
+		<div class="div2">
+			<p >登录</p>
+			<form action="#">
+				邮箱：<input type="email" placeholder="请输入邮箱" required /><br>
+				密码：<input type="password" placeholder="请输入密码" required /><label for=""></label><br>
+				<br>
+				<input type="submit" value="登录" style="width: 100px;background: cadetblue;margin-left: 50px;"/>
+			</form>
+		</div>
+		<script type="text/javascript">
+			let div1 = document.getElementsByTagName("div")[0];
+			let div2 = document.getElementsByTagName("div")[1];
+			div1.onclick = function(){
+				$(".div2").children("form").css("display","none");
+				$(".div1").children("form").css("display","block");
+			}
+			
+			div2.onclick = function(){
+				$(".div1").children("form").css("display","none");
+				$(".div2").children("form").css("display","block");
+			}
+		</script>
+	</body>
+</html>
