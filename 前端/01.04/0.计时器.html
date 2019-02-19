@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>开始计数:<span>0</span></p>
+		<p>停止计数</p>
+		<script type="text/javascript">
+			let  p1 = document.getElementsByTagName("p")[0];
+			let  p2 = document.getElementsByTagName("p")[1];
+			let span1 = document.getElementsByTagName("span")[0];
+			
+			let count = 0;
+			p1.onclick = function(){
+				
+				window.onclick=function(){
+					count++;
+					span1.innerText =count;
+				}
+			
+				p2.onclick = function(){
+					window.onclick=null
+					}
+				
+			}
+		
+		</script>
+	</body>
+</html>
