@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript"></script>
+		<style type="text/css">
+			button {
+				background-color: #007FFF;
+				color: white;
+				text-align: center;
+				border:none;
+			}
+		</style>
+	</head>
+	<body>
+		<div>IP地址查询</div>
+		<input type="text" name="" id="" value="" />
+		<button type="button">查询</button>
+		<script type="text/javascript">
+			$("button").click(function(){
+				$.ajax({
+					url:"https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?co=&resource_id=6006&t=1547122315894&ie=utf8&oe=gbk&cb=op_aladdin_callback&format=json&tn=baidu&cb=?&_=1547120816276",
+					data:{"query":$("input").val()},
+					type:"get",
+					dataType:"jsonp",
+					success:function(data){
+						$("p").remove();
+						console.log(data.data[0])
+						$("button").after("<p>"+$("input").val()+"来自"+"<b>"+data.data[0].location+"</b>"+"</p>")
+						$("b").css({"color":"red"})
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
