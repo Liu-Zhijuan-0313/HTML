@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript"></script>
+		<style type="text/css">
+			
+			ul{
+				
+				padding: 1px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="" />
+		<button type="button">查询</button>
+		<ul>
+			
+		</ul>
+		
+		<script type="text/javascript">
+			$("button").click(function(){
+				$.ajax({
+					url:"https://free-api.heweather.net/s6/weather/forecast?parameters",
+					type:"get",
+					data:{"location":$("input").val(),"key":"aa1c3db6bddc4382909792be601d2a08 "},
+					success:function(data){
+						console.log(data.HeWeather6[0].daily_forecast)
+						console.log(data.HeWeather6[0].daily_forecast[0].cond_txt_d,data.HeWeather6[0].daily_forecast[0].date)
+						for(let j=0;j<data.HeWeather6[0].daily_forecast.length;j++){
+							$("ul").append("<li>"+data.HeWeather6[0].daily_forecast[j].date+"白天："
+							+ data.HeWeather6[0].daily_forecast[j].cond_txt_d + "&nbsp&nbsp&nbsp&nbsp"+
+							"风向："+data.HeWeather6[0].daily_forecast[j].wind_dir+"</li>"+"<br>")
+							
+							$("ul").children().css({"color":"red","list-style":"none","border":"1px solid blue","width":"300px"})
+						}
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
+<!-- 
+
+-->

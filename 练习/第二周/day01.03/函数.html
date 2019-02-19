@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			/*
+			let sum=0;
+			for(let i=0;i<10;i++){
+				if(i==3){
+					// break;
+					continue;
+				}
+				sum+=i;
+			}
+			console.log(sum);
+			console.log(isNaN(100))
+			let i=3.1415;
+			console.log(parseFloat(i));
+			console.log(parseInt(i));
+			
+			console.log(isFinite("78.8"))
+			
+			function add(a,b){
+				return a+b;
+			}
+			console.log(add(2,3))
+			
+			function fun(n) {
+				if(n==1){
+					return 0;
+				}
+				else if(n==2){
+					return 1;
+				}
+				else {
+					return fun(n-1)+fun(n-2);
+				}
+			}
+			console.log(fun(30));
+			*/
+		   
+		   /*
+		   console.log(Math.PI);
+		   console.log(Math.ceil(3.84));
+		   console.log(Math.floor(3.84));
+		   console.log(Math.round((3.5)));
+		   console.log(Math.round(3.49));
+		   console.log(Math.max(3,4,55));
+		   console.log(Math.min(2,44,21));
+		   console.log(Math.abs(-3));
+		   console.log(Math.pow(2,3));
+		   console.log(parseInt(Math.random()*5))
+		   
+		   
+		   var str="hello world"
+		   console.log(str.length);
+		   console.log(str.indexOf("o"));
+		   console.log(str.lastIndexOf("o"));
+		   console.log(str.charAt(8));
+		   
+		   console.log(str.replace("world", "you"));
+		   console.log(str.substr(3,7));
+		   console.log(str.substring(3,7));
+		   console.log(str.split("o"));
+		   console.log(str.split("o").length);
+		   console.log(str.toLowerCase());
+		   console.log(str.toUpperCase());
+		   */
+		  /*
+		  var mydate= new Date();
+		  console.log(mydate.getFullYear());
+		  console.log(mydate.getMonth());
+		  console.log(mydate.getDate());
+		  console.log(mydate.getDay());
+		  console.log(mydate.getHours());
+		  console.log(mydate.getMinutes());
+		  console.log(mydate.getSeconds());
+		  console.log(mydate.getTime());
+		   
+		   var array= new Array(1,2,3,4,5,6)
+		   console.log(array.length);
+		   console.log(array.indexOf(4));
+		   console.log(array.reverse());
+		   console.log(array.sort(function(a,b){
+				return b-a;
+		   }))
+		   array.push(7);
+		   console.log(array);
+		   array.pop();
+		   console.log(array);
+		   array.unshift(3);
+		   console.log(array);
+		   array.shift();
+		   console.log(array);
+		   array.splice(0, 4,23,43,12)
+		   console.log(array)
+		  */
+		 
+		 
+		 /*
+		 function page(){
+			 console.log("玩游戏")
+		 }
+		 var person = new Object();
+		 person.name = "py1811";
+		 person.age = 22;
+		 person.eat = function(){
+			 console.log("吃饭")
+		 };
+		person.page=page;
+		console.log(person.eat());
+		console.log(person.page());
+		
+		console.log(person);
+		a = JSON.stringify(person);
+		console.log(a);
+		b = JSON.parse(a);
+		console.log(b)
+		*/
+		
+// 		let c = setTimeout(function (){
+// 			console.log("hello");
+// 		},1000)
+// 		
+// 	    setTimeout(function(){
+// 			clearTimeout(c);
+// 		},2000)
+		
+// 		d = setInterval(function(){
+// 			console.log("world");
+// 		},300)
+		// setTimeout(clearInterval(d),1000);
+		
+		
+		/*
+		let count = 10;
+		countdown =setInterval(function(){
+			if (count>=1){
+				console.log(count);
+				count--;
+			}
+			else {
+				clearInterval(countdown);
+				console.log("敌军还有三十秒到达战场");
+			}
+		},1000)
+		*/
+		
+		
+		
+		/*
+		function team(a,b,f){
+			console.log(a,b);
+			f();
+		};
+		team(10,20,function(){console.log("匿名函数")});
+		
+		
+		let team1 = function() {
+			console.log("匿名函数赋予变量");
+		};
+		team1();
+		
+		
+		let obj = {};
+		obj.name = function(){
+			console.log("匿名函数可以赋予obj对象的键")
+		};
+		obj.name();
+		*/
+	   
+	   
+// 	   let a = function(){
+// 		   console.log("匿名函数赋值给变量,执行函数");
+// 	   }
+// 	   a();
+// 	   
+// 	   let obj = {};
+// 	   obj.f = function(){
+// 		   console.log("匿名函数赋值给对象的键");
+// 	   }
+// 	   obj.f();
+// 	   
+// 	   function fun(b){
+// 		   b();
+// 	   }
+// 	   fun(function(){console.log("匿名函数作为参数传递")})
+	   
+	   function fun(){
+		   console.log("外部函数执行");
+		   function fun1(){
+			   console.log("内部函数执行");
+		   }
+		   // fun1();
+		   return fun1;
+	   }
+	   fun()();
+	   
+	   
+			function fun01(){
+				let a=13;
+				let b=13;
+				function fun02(){
+					a--;
+					b++
+					console.log(a,b,a+b);
+				}
+				return fun02;
+			}
+			team = fun01();
+			team();
+			team();
+			team();
+			fun01()();
+		</script>
+	</body>
+</html>

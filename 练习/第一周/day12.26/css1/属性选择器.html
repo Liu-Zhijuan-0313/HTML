@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--
+		 属性选择器：
+				
+		 -->
+		<style type="text/css">
+			/* p[id] {
+				color: red;
+			}
+			p[id="a2"] {
+				color: #0000FF;
+			} */
+			/* p[id$="4"] {
+				color: #A52A2A;
+			}
+			p[id^="a"] {
+				color: #8A2BE2;
+			} */
+			p[id*="aa"] {
+				color: red;
+			}
+			p[class~="a1"] {
+				color: #00FFFF;
+			}
+			a:link {
+				color: red;
+			}
+			a:visited {
+				color: blue;
+			}
+			a:hover {
+				color: #8A2BE2;
+			}
+			a:active {
+				color: black;
+			}
+			/* input[name="pwd"]:disabled {
+				background-color: #0000FF;
+			}
+			
+			input:checked {
+				width: 50px;
+				height: 100px;
+			}
+			ul>li:fi */rst-child {
+				color: #00FFFF;
+			}
+			ul>li:last-child {
+				color: #00FFFF;
+			}
+			ul>li:nth-child() {
+				color: #8A2BE2;
+			}
+			
+			/* ul>li:nth-last-child(odd) {
+				color: #FF0000;
+			} */
+			
+			/* ul>li>span:only-child {
+				color: #0000FF;
+			}
+			ul>li:first-of-type {
+				color: #00FFFF;
+			}
+			ul>li:first-child {
+				
+			} */
+			ul>li>span:only-of-type {
+				color: #8A2BE2;
+			}
+			input:not([type="text"]) {
+				border: 2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="a1 aa1">p1</p>
+		<p class="a1 b1">bdkf</p>
+		<p id="a2">p2</p>
+		<p id="aa3">p3</p>
+		<p id="a4aa">p4</p>
+		<p id="aa5">p5</p>
+		<a href="http://sdf.com">伪类选择器</a>
+		<form action="" method="get">
+			<input type="text" name="username" disabled>
+				<input type="password" name="pwd" disabled />
+			<input type="checkbox" name="username" checked/>	
+		</form>
+		<ul>
+		
+			<span>dlf</span>
+			<li>01</li>
+			<li><b>sd</b><span>02</span></li>
+			<li>03</li>
+			<li>04</li>
+			<li>05</li>
+			<li>06</li>
+			<li>07</li>
+			<li>08</li>
+			<li>09</li>
+			<li>10</li>
+			<span>sfwd</span>
+		</ul>
+	</body>
+</html> 

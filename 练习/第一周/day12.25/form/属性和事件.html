@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<!-- <body  onkeydown="console.log('按下')" onkeypress="console.log('按着')"  onkeyup="console.log('抬起')">	</body> -->
+	 <!-- <body onload="console.log('加载完成')" onunload="console.log('卸载完成')"
+	 onfocus="console.log('聚焦')" onblur="console.log('失去焦点')"
+	 onresize="console.log('窗口大小改变了')"></body> -->
+		<!-- 属性：
+				id     不能重复 不能以数字开头（通常用来交互）
+				class  可以有多个类名，可以重复，多个元素属于同一类
+						类名用来编写样式（通常情况）
+				style 为属性样式
+				title 描述了元素的额外信息 (作为工具条使用)
+				href  超级链接a的路径
+				src   img,video,audio中的路径
+				
+				border 外边框距 cellspacing 单元格距离 cellpadding 单元格内间距
+				colspan  列合并 rowspan 行合并
+				
+				checked  默认选中
+				selected 下拉选择框option 中selected属性设置默认选中项
+				required 必填项
+				placeholder 提示
+				action  form中用来提交到服务器的路径
+				method 请求方式（post和get）
+				
+				name 
+				values
+				accesskey="" 快捷键
+				contenteditable="true" 可以编辑
+				hidden="hidden"  控制隐藏
+				rtl  文字右对齐 dir="rtl"
+				ltr  文字左对齐 dir="ltr"
+				-->
+		<form action="" method="post">
+			<input type="text" name="" id="a1" value="" accesskey="h"/>
+			<input type="text" name="" id="a2" value="" accesskey="i"/>
+		</form>
+		<span style="color: red;background-color: antiquewhite;border-bottom-width: 5px;border-bottom-style: dotted;border-bottom-color: red;">style 为属性样式</span>
+		<p dir="rtl">hello</p>	
+		<span contenteditable="true">编辑</span>
+			 -->
+		<!-- 
+		窗口事件：
+			onload 加载完成 onunload 卸载完成
+			onfocus onblur 
+			onresize 窗口大小改变了
+		表单事件：
+			onfocus 聚焦 onblur 失去焦点 onchange 输入内容变化
+		键盘事件：
+			onkeydown按下瞬间 onkeypress正在按着 onkeyup松开了
+		鼠标事件：
+			onmouseenter 鼠标划入   onmousemove 在元素上移动
+			onmouseleave 鼠标离开了 onmousedown 鼠标
+			onmouseup onmousewheel
+		
+		<!-- <form action="#" method="post">
+			<input type="text" onfocus="console.log('聚焦了')" onblur="console.log('失去焦点')" 
+			onchange="console.log('输入内容改变了')"/>
+		</form> -->
+		<p onmouseenter="console.log('鼠标划入')" onmousemove="console.log('鼠标在元素上移动')" 
+		onmousewheel="console.log('鼠标转动滑轮')" onmouseleave="console.log('鼠标离开了')"
+		onmousedown="console.log('鼠标按下')" onmouseup="console.log('鼠标抬起')"> 测试</p>
+		</body>
+	
+</html>

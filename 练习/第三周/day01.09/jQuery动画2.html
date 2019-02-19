@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript">
+			
+		</script>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<p>停止</p>
+		<div></div>
+		
+		
+		<script type="text/javascript">
+			// 可以加回调函数,执行多个动画
+// 			$("p").click(function(){
+// 				$("div").animate({"width":200,"height":200},2000,function(){
+// 					$("div").animate({"width":50,"height":50})
+// 				})
+// 			})
+			$(window).click(function(e){
+				$("div").animate({"left":e.clientX-50},4000)
+				$("div").animate({"top":e.clientY-50},2000)
+			})
+			
+			$("p").click(function(e){
+				e.stopPropagation();
+				// stop第一个参数终止后面的动画,第二个参数快速执行到最后
+				$("div").stop();
+				// $("div").stop(false,false);
+				// $("div").stop(false,true);
+				// $("div").stop(true,true);
+				// $("div").stop(true,false);
+			})
+			$("p").click(function(){
+				$("div").delay(2000).animate({"width":200,"height":200},2000)
+			})
+		</script>
+	</body>
+</html>

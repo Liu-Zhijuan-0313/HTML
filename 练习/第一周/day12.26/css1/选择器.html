@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<!-- 	<link rel="stylesheet" type="text/css" href="main.css"/> -->
+		<!-- 
+		* 通配符
+		标签选择器
+		# id
+		. 类选择器
+		
+		, 逗号选择器 满足一项即可
+		空格（后代）选择器 选择子孙
+			前面E为祖先元素，Ｆ为后代元素，所表达的意思就是选择了Ｅ元素的所有后代Ｆ元素，中间用空格隔开
+		> 只选择子标签 子元素选择器Ｅ > F，其中Ｆ仅仅是Ｅ的子元素而以
+
+		+ 相邻的下一个，EF两元素具有一个相同的父元素，而且Ｆ元素在Ｅ元素后面，而且相邻
+
+		~ A~B ，E和F元素是属于同一父元素之内，并且F元素在Ｅ元素之后，那么E ~ F 选择器将选择
+
+		
+		-->
+		<style type="text/css">
+			body {
+				background-color: bisque;
+			}
+			
+			/* * {
+				color: red;
+			} */
+		
+			/* .item {
+				color: brown;
+			}
+			#item1 {
+				color: red;
+				background-color: #00FFFF;
+			}
+			span {
+				color: blue;
+			}
+			span#item2 {
+				color: #00FFFF;
+			} */
+			
+			/* div span {
+				color: red;
+			} */
+			/* div#div2 span {
+				color: #8A2BE2;
+			} */
+			
+			p,span{
+				color: #0000FF;
+			}
+			
+		/* 	div span {
+				color: red;
+			} */
+			div>span ,{
+				color: blue;
+			}
+			 #a4+span{
+				color: red;
+			}
+			#a1~span {
+				color: red;
+			}
+			span
+		</style>
+	</head>
+	<body>
+		<!-- <span class="item">span</span>
+		<span id="item2">span1</span>
+		<p class="item">p</p>
+	
+		<span id="item1">span</span>
+		<span>span</span>
+		
+		<div>
+			A
+			<div>
+				B
+				<div>
+					C
+					<P>
+						D
+					<span>span</span>
+					</P>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div id="div2">
+			<span>SPAN</span>
+		</div> -->
+		<span id="a1">A</span>
+		<span id="a2">B</span>
+		<span id="a3">C</span>
+		<a href="#">span</a>
+		<span id="a4">D</span>
+		<span id="a5">E</span>
+		<p>P</p>
+		
+		<div>
+			c
+			<div>
+				a
+				<div>
+					b
+					<span>
+						SPAN
+					</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

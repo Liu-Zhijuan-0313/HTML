@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<!-- 
+		form 
+		 属性action: 用来提交到服务器的路径
+		 属性method: 用来提交的方法
+		 表单域用来提交到服务器
+		 
+		 可以将表单域中的数据提交到服务器
+		 name=""
+		 
+		 表单域：
+				text：文本框 autocomplete  placeholder=""提示 required 必须写
+				password：密码框
+				hidden：  隐藏域 看不到
+				checkbox：复选框   checked 默认选择
+				radio：   单选框 name一样
+				file:     文件上传框
+				textarea: 文本区
+				
+				请求：request 浏览器发出的请求
+				响应：response 
+				
+				
+		 -->
+		 <form action="http://127.0.0.0:8888" method="post">
+		 	
+		 	用户名：<input required type="text" name="username" value="" autocomplete="off" placeholder="请输入用户名"/><br>
+			密码：<input type="password" name="password" id="" value="" /><br>
+			<!-- 隐藏域看不到 -->
+			<input type="hidden" name="agree" id="" value="" />
+			
+			<!-- 复选框name可以不一样 -->
+			<br>爱好:<br>
+			足球<input type="checkbox" name="hobby" id="" value="" ckecked />
+			篮球<input type="checkbox" name="hobby" id="" value="" />
+			
+			<!-- 单选框name一样 -->
+			<br>性别:<br>
+			男<input type="radio" name="sex" id="" value="" />
+			女<input type="radio" name="sex" id="" value="" />
+			
+			<br>用户头像<br>
+			<input type="file" name="headpic" id="" value="" />
+			
+			<br>地址省份
+			<select name="provice">
+				<option value ="">河南</option>
+				<option value ="">河北</option>
+				<option value ="" selected="">广州</option>
+			</select>
+			
+			<br>
+			<input type="color" name="col" id="" value="" />
+			<input type="date" name="borntime" id="" value="" />
+			<input type="email" name="email" id="" value="" />
+			<input type="number" name="num" id="" value="" />
+			
+			<!-- 表单按钮 -->
+			<input type="submit" name="" id="" value="提交" />
+			<input type="reset" name="" id="" value="重置" />
+			<input type="" name="" id="" value="" />
+			
+		 </form>
+		e
+	</body>
+</html>

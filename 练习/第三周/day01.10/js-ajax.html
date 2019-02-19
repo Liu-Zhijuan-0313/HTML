@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 1.创建ajax对象
+			let xmlHttp = null;
+			// 2.针对不同浏览器对ajax对象初始化
+			if(window.XMLHttpRequest){
+				xmlHttp = new window.XMLHttpRequest();
+			}else{
+				xmlHttp = new ActiveXObject("Mircrosoft.XMLHTTP")
+			}
+			// 3.监听ajax对象状态吗的改变
+			// 当通信对象状态吗改变时,则会调用onreadystatechange
+			console.log(xmlHttp.readyState)
+			xmlHttp.onreadystatechange = function(){
+				console.log("当前值"+xmlHttp.readyState)
+			}
+			// 4.初始化连接
+			xmlHttp.open("GET","data.txt",true)
+			// 5.发送请求
+			xmlHttp.send();
+		</script>
+	</body>
+</html>

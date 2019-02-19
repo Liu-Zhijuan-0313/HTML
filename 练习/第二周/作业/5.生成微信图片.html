@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			document.onclick = function(e){
+				let weixin = document.createElement("img");
+				weixin.setAttribute("src","img/weixin.png");
+				document.body.appendChild(weixin);  
+				
+				let ran = Math.random()*54 +30;
+				weixin.width = ran;
+				weixin.height = ran;
+
+				weixin.style.position = "absolute";
+				weixin.style.left = e.clientX + "px";
+				weixin.style.top = e.clientY + "px";
+				
+				
+			}
+			
+		</script>
+	</body>
+</html>

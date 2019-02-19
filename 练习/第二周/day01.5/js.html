@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			alert("阻止js代码")
+		</script>
+		<script src="js/min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			
+			console.log("在head中输出")
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.log("在body中输出")
+			document.write("<h1>在script后面执行</h1>")
+			document.write(123)
+			document.write("<a href='#'>超级链接</a>")
+			console.log("<a href='#'>超级链接</a>")
+			
+		</script>
+		<button type="button" onclick="alert('asdn')">点我有惊喜</button>
+	</body>
+</html>

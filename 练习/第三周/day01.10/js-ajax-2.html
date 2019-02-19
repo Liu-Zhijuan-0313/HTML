@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>默认内容</p>
+		<p>dsfgdfsd</p>
+		<p>刷新</p>
+		<script type="text/javascript">
+			let p = document.getElementsByTagName("p")[2];
+			
+			p.onclick = function(){
+				let xmlHttp = new window.XMLHttpRequest();
+				
+				xmlHttp.onreadystatechange = function(){
+					
+					if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+						console.log(xmlHttp.readyState)
+						console.log(xmlHttp.responseText)
+						document.getElementsByTagName("p")[0].innerText = xmlHttp.responseText
+					}
+				}
+				xmlHttp.open("GET","data.txt");
+				xmlHttp.send();
+				
+				
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

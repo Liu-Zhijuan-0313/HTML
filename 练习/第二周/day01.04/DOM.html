@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p1">p1</p>
+		<p>p2</p>
+		<p class="p3">p3</p>
+		<p name= "p4">p4 <span>span</span></p>
+		
+		<script type="text/javascript">
+			// 通过id得到惟一一个
+			let p1 = document.getElementById("p1");
+			console.log(typeof(p1));
+			console.log(p1)
+			// 通过标签名得到集合 集合[n]
+			let p2 = document.getElementsByTagName("p")[1];
+			console.log(typeof(p2));
+			console.log(p2)
+			
+			// 通过类名得到集合 集合[n]
+			let p3 = document.getElementsByClassName("p3")[0];
+			console.log(typeof(p3));
+			console.log(p3);
+			// 通过属性名name得到集合 集合[n]
+			let p4 = document.getElementsByName("p4")[0];
+			console.log(typeof(p4));
+			console.log(p4);
+			console.log(p4.innerHTML,"********",p4.innerText);
+			p3.innerHTML = "<h1>hello</h1>"
+			p4.innerText = "<h1>hello</h1>"
+		</script>
+		
+		
+		<div id="div1">div1</div>
+		<div class="div2">div2</div>
+		<div name="div3">div3</div>
+		<div>div4</div>
+		<script type="text/javascript">
+			let div1 = document.getElementById("div1");
+			console.log(div1);
+			let div2 = document.getElementsByClassName("div2");
+			console.log(div2);
+			let div3 = document.getElementsByName("div3");
+			console.log(div3);
+			let div4 = document.getElementsByTagName("div");
+			console.log(div4);
+		</script>
+		
+		
+		<div>鼠标点击了：<span id="countspan">0</span></div>
+		<script type="text/javascript">	
+			let count=0;
+			let countspan = document.getElementById("countspan");
+			
+			window.onclick = function(){
+				console.log("鼠标点击了")
+				count++;
+				countspan.innerText = count;
+			}
+		</script>
+		
+		
+		
+		<!-- <div>鼠标点击：<span class="span1">0</span></div>
+		<script type="text/javascript">
+			let count1 = 0;
+			let span1 = document.getElementsByClassName("span1");
+			window.onclick = function(){
+				console.log("点击鼠标");
+				count1++;
+				span1.innerText = count1;
+			}
+		</script> -->
+		
+		<!-- 获取元素 -->
+		
+		<p id="p01">hello world</p>
+		<script type="text/javascript">
+			let p01 = document.getElementById("p01");
+			p01.id ="ppppppppp";
+			p01["id"] = "pp";
+			p01.setAttribute("id","ppp");
+			p01.setAttribute("title","p01");
+			p01.removeAttribute("title")
+			
+			console.log(p01.id);
+			console.log(p01["id"]);
+			console.log(p01.getAttribute("id"));
+			p01.style.color="red";
+			console.log(p01.style.color);
+			
+		</script>
+	</body>
+</html>

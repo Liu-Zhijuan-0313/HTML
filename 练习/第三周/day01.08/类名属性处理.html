@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript">
+			
+		</script>
+		<style type="text/css">
+			.p{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>p1</p>
+		<span>span</span>
+		<script type="text/javascript">
+			let span = document.getElementsByTagName("span")[0];
+			span.onclick = function(){
+				
+				// console.log($("p").hasClass("p")) 
+				// 点击span标签让p标签变色
+// 				let p = $("p").hasClass("p");
+// 				if(p==false){
+// 					$("p").addClass("p")
+// 				}else if(p==true){
+// 					$("p").removeClass("p")
+// 				}
+				$("p").toggleClass("p")
+			}
+		</script>
+	</body>
+</html>

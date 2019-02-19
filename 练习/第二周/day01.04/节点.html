@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- <div>
+			<p>p1</p>
+			<p>p2</p>
+			<p id="p3">p3</p>
+			<p>p4</p>
+			<p>p5</p>
+		</div>
+		<script type="text/javascript">
+			let div = document.getElementsByTagName("div")[0];
+		
+			console.log(div.children);
+			console.log(div.firstElementChild);
+			console.log(div.lastElementChild);
+			let p = document.getElementById("p3");
+			console.log(p.parentElement);
+			console.log(p.previousElementSibling);
+			console.log(p.nextElementSibling);
+			
+			let p6 = document.createElement("p");
+			// div.appendChild(p6);
+			div.insertBefore(p6,p3);
+			p6.innerText = "p6";
+			
+			p6.setAttribute("id","p6");
+			console.log(div.children);
+		</script> -->
+		<div>
+			<p>p1</p>
+			<p>p2</p>
+			<p class="p3">p3</p>
+			<p>p4</p>
+			<p>p5</p>
+		</div>
+		<script type="text/javascript">
+			let div = document.getElementsByTagName("div")[0];
+			let p6 = document.createElement("span");
+			
+			div.appendChild(p6);
+			console.log(div.children);
+			p6.innerText = "p6";
+			
+		</script>
+	</body>
+</html>

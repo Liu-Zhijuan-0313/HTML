@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript">
+			
+		</script>
+	</head>
+	<body>
+		<div>div</div>
+		<span>span </span>
+		<span id="span1">p</span>
+		<script type="text/javascript">
+			$("div").append("<h1>标题</h1>")
+			$("<h2>二级标题</h2>").appendTo("div");
+			$("div").prepend("<h3>三级标题</h3>")
+			$("<h4>四级标题</h4>").prependTo("div")
+			
+			$("div").after("<h5>五级标题</h5>")
+			$("<h6>六级标题</h6>").insertAfter("div")
+			$("div").before("<h5>五级标题</h5>");
+			$("<h6>六级标题</h6>").insertBefore("div");
+			$("span").replaceWith("<p>p</p>");
+			$("<p>p</p>").replaceAll("span");
+			$("div").empty();
+			$("span").remove();
+			$("span").remove("#span1");
+		</script>
+	</body>
+</html>
+<!-- 
+	A.append(B)
+	A.appendTo(B)
+	A.prepend(B)
+	A.prependTo(B)
+	
+	A.after(B)
+	A.insertafter(B)
+	A.before(B)
+	A.insertbefore(B)
+	
+	A.empty()
+	A.remove()
+	A.remove("#p")
+ -->

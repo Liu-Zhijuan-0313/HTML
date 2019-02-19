@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript">	
+		</script>
+	</head>
+	<body>
+		<span>全选</span><input type="checkbox"  value="" />
+		<br>
+		足球<input type="checkbox"><br>
+		篮球<input type="checkbox"><br>
+		羽毛球<input type="checkbox"><br>
+		排球<input type="checkbox"><br>
+		乒乓球<input type="checkbox">
+		<script type="text/javascript">
+			let input1 = document.getElementsByTagName("input")[0];
+			input1.onclick = function(){
+				let state = $("span").text()
+				let span = $("span")
+				let input =$("input:gt(0)")
+				if(state =="全选"){
+					span.text("反选")
+					input.prop("checked",true)
+				}
+				else if(state =="反选"){
+					span.text("全选")
+					input.prop("checked",false)
+				}
+			}
+		</script>
+	</body>
+</html>

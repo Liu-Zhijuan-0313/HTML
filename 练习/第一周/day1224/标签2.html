@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<!-- 
+		ol 有序列表  使用符号表示 
+		ul 无序列表  使用数字表示
+		li  列表项目
+		dl 自定义列表 
+		dt 列表项目
+		dd 列表项目中的具体内容
+		
+		a 超级链接 href="#"  路径 target="_blank" 新页面打开 
+		锚点 
+		img 图片 src 路径  width heigth  usemap="mapnameattr"
+		map name="mapnameattr"
+			area shape  形状  coords 坐标
+		audio controls 显示播放 autoplay 自动播放
+		video 
+		table 表 用行列表示布局 border=""外边框宽度 cellspaceing="" cellpadding
+		tr 表行
+		th 表头 
+		td 
+		width heigth 数值或百分比
+		colspan 列合并，左右
+		rowspan 行合并，上下
+		
+		
+		Emmet插件
+			>  生成子标签
+			^  生成父标签的同级标签
+			*  代表产生多个项目
+			{} 实质内容 ul>li.item${item$}*3
+			$  子增长
+			+  同级标签
+			@N 指定开始的序号，$ 后面增加 @- 来实现倒序排列  ul>li.item$@3*5 
+			() 优先级 div>(ol>li*3)+(ul>li*3)+ol>li
+		a标签超级链接 需要使用到属性href  目标url
+		target  _self 当前页面打开  _blank 新的空白页面打开
+		锚点跳转，超级链接可以指定本页面特定位置  id属性，不能重复
+		属性 target="_blank" 新页面打开  target="_self"默认本页打开
+		table tr th td
+		img src
+		video src
+		
+		
+		 -->
+		 <div>
+		 	
+		
+		 <ol>
+		 	<li>
+				第一章
+				<ol>
+					<li>第一节</li>
+					<li>第二节</li>
+					<li>第三节</li>
+				</ol>
+				</li>
+			<li>
+				第二章
+				<ul>
+					<li>第一节</li>
+					<li>第二节</li>
+					<li>第三节</li>
+				</ul>
+				</li>
+			<li>第三章</li>
+		 </ol>
+		 <ul>
+		 	<li>第一章</li>
+			<li>第二章</li>
+			<li>第三章</li>
+		 </ul>
+		 <li>第一章</li>
+		 <li>第二章</li>
+		 <li>第三章</li>
+		</div>
+		<div>
+			<dl>
+				<dt>第一章<dd>第一章内容</dd></dt>
+				<dt>第二章<dd>第二章内容</dd></dt>
+				<dt>第三章</dt>
+				<dd>第三章内容</dd>
+			</dl>
+		</div>
+		div>ol>li*3>ol>li*3^^^ul>li*3>{kjjkgh}
+		<div>
+		<a href="http://www.baidu.com" target="_blank">百度</a>
+		<a href="hello world.html">hello world</a>
+		<a href="http://192.168.15.3:8848/Py1811/day1224/%E6%A0%87%E7%AD%BE2.html">内容</a>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<span id="py1811">跳转目标1</span>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<span id="py1810">跳转目标2</span>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<a href="#py1811">跳转到此位置</a>
+		<a href="#py1810">跳转到此位置</a><br>
+		</div>
+		
+		<div>
+			<img src="https://imgsa.baidu.com/news/q%3D100/sign=a91b3565923df8dca03d8b91fd1072bf/a50f4bfbfbedab64da9b7652fa36afc378311eb2.jpg" width="300px" height="200px" alt="">
+			<img src="img/img01.jpg" alt="" width="300px" height="200px" usemap="#imghotarea">
+			<map name="imghotarea" >
+				<area shape="circle" coords="100,100,50" href="#" alt="">
+				<area shape="rect" coords="150,150,200,200" href ="#" alt="" />
+				<area shape="poly" coords="0,0,0,50,50,10,50" href ="#" alt="" />
+			</map><br>
+			<video src="video/1.mp4" width="300px" height="240px" controls></video>
+			<audio src="http://www.ytmp3.cn/down/55517.mp3" controls>
+				当前浏览器不支持audio
+			</audio>
+			<audio src="http://www.ytmp3.cn/down/55517.mp3" controls>
+				当前浏览器不支持audio
+			</audio>
+		</div>
+		<table border="" cellspacing="" cellpadding="">
+			<tr><th>Header</th></tr>
+			<tr><td>Data</td></tr>
+		</table>
+		
+	</body>
+</html>

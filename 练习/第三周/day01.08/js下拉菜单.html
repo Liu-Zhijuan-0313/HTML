@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript">
+			
+		</script>
+		<style type="text/css">
+			ul{
+				display: none;
+			}
+			.ul{
+				display: block;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>html</p>
+			<ul>
+				<li>html1</li>
+				<li>html2</li>
+				<li>html3</li>
+			</ul>
+			<p>css</p>
+			<ul>
+				<li>css1</li>
+				<li>css2</li>
+				<li>css3</li>
+			</ul>	
+			<p>js</p>
+			<ul>
+				<li>js1</li>
+				<li>js2</li>
+				<li>js3</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			// 
+			let ps=document.getElementsByTagName("p");
+			// 遍历对象
+			for(let i=0;i<ps.length;i++){
+				ps[i].onclick = function(){
+					for(let j=0;j<ps.length;j++){
+ 						// ps[j].nextElementSibling.style.display ="none";
+ 						// $(ps[j]).next().css("display", "none");
+						
+						if(this==ps[j]){
+							$(this).next().toggleClass("ul")
+						}else{
+							if($(ps[j]).next().hasClass("ul")){
+								$(ps[j]).next().removeClass("ul")
+							}
+						}
+ 					}
+					// ps[i].nextElementSibling.style.display="block";
+					$(ps[i]).next().css("display","block");	
+				
+				}
+				
+			}
+		</script>	
+	</body>
+</html>
