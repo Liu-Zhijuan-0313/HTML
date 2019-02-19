@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/lib/jquery-2.1.4.js" type="text/javascript">
+			
+		</script>
+	</head>
+	<body>
+		<!-- <div>
+			<p>p1</p>
+			<p id="p2">p2</p>
+			<p>p3</p>
+			<p>p4</p>
+			<p>p5 <span>span</span></p>
+			<span>span</span>
+		</div> -->
+		<div id="div1">
+			div1
+			<div id="div2">
+				div2
+				<div id="div3">
+					div3
+					<div id="div4">
+						div4
+						<div id="div5">div5 <span>span</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<span class="span1">span1</span>
+			<span class="span2">span2</span>
+			<span class="span3">span3</span>
+			<span class="span4">span4</span>
+			<span class="span5">span5</span>
+			<span class="span6">span6</span>
+			<span class="span7">span7</span>
+			<span class="span8">span8</span>
+			<span class="span9">span9</span>
+			<span class="span10">span10</span>
+		</div>
+		
+		<script type="text/javascript">
+			// :first和.first()第一个p标签
+// 			$("p:first").css("color", "red");
+// 			$("p").first().css("color","red");
+			
+			// :last和.last()最后一个p标签
+// 			$("p:last").css("color","blue");
+// 			$("p").last().css("color","blue");
+			
+			// :eq(n)和.eq(n)索引等于n的p标签
+// 			$("p:eq(2)").css("color","green");
+// 			$("p").eq(2).css("color","green");
+			
+			//:lt(n)查找索引小于n的p标签 :gt(n)大于
+// 			$("p:lt(2)").css("color","red");
+// 			$("p:gt(2)").css("color","red");
+
+			// .filter()过滤 .not()剔除
+// 			$("p").filter("#p2").css("color","red");
+// 			$("p").not("#p2").css("color","blue");
+			
+			// div中的所有span标签,子孙代
+			// $("div").find("span").css("color","blue");
+			
+			
+			// div的子代标签,孙代会继承子代样式
+//  		$("div").children("span").css("color","red");
+// 			$("div").children("p").css("color","red");
+ 			
+			// .parent()父级.parents()所有祖先.parentsUntil()直到那个
+// 			$("span").parent().css("color","red");
+// 			$("span").parents().css("color","red");
+			// $("span").parentsUntil("#div2").css("color","red");
+			
+			// .next()后面一个.nextAll() 后面所有.nextUntil()后面直到那个
+// 			$(".span5").next().css("color","red");
+// 			$(".span5").nextAll().css("color","red");
+			// $(".span5").nextUntil(".span10").css("color","red");
+			
+			// prev()前面一个 .prevAll()前面所有 .prevUntil()前面直到那个
+// 			$(".span5").prev().css("color","red");
+// 			$(".span5").prevAll().css("color","red");
+			// $(".span5").prevUntil(".span1").css("color","red");
+		
+			// 所有同级标签中除了类名为span5其他
+			$(".span5").siblings().css("color","red");
+		</script>
+	</body>
+</html>
+<!-- 
+	:first和.first()第一个p标签
+	:last和.last()最后一个p标签
+	:eq(n)和.eq(n)索引等于n的p标签
+	:lt(n)查找索引小于n的p标签 :gt(n)大于
+	.filter()过滤 .not()剔除
+	.find() div中的所有span标签,子孙代
+	.parent()父级.parents()所有祖先.parentsUntil()直到那个
+	
+	.next()后面一个.nextAll() 后面所有.nextUntil()后面直到那个
+	prev()前面一个 .prevAll()前面所有 .prevUntil()前面直到那个
+	.siblings()所有同级标签中除了类名为span5其他
+ -->
